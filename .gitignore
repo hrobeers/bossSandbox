@@ -1,5 +1,14 @@
+# Erlang
+
 .eunit
 deps
 *.o
 *.beam
 *.plt
+
+
+# ChicagoBoss
+
+ebin/
+log/
+erl_crash.dump
