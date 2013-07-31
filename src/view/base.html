@@ -1,26 +1,101 @@
 <!DOCTYPE html>
-
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8" />
 
-    <title>{% block title %}Boss Sandbox{% endblock %}</title>
-    <meta name="description" content="">
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
 
-    <meta name="viewport" content="width=device-width">
+  <title>{% block title %}Title{% endblock %}</title>
 
-    <link rel="stylesheet" href="/static/css/main.css">
+
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/foundation.css">
+
+  <script src="/static/js/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
-<header><h1>Boss Sandbox</h1></header>
-<!--<nav>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/user/register">Register</a></li>
-    <li><a href="/user/login">Login</a></li>
-  </ul>
-</nav>-->
+<div class="row">
+  <div class="large-12 columns">
+
+    <!-- Navigation -->
+
+      <nav class="top-bar">
+        <ul class="title-area">
+          <!-- Title Area -->
+          <li class="name">
+            <h1>
+              <a href="#">
+                {% block title %}Title{% endblock %}
+              </a>
+            </h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="left">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <ul class="right">
+            <li class="search">
+              <form>
+                <input type="search">
+              </form>
+            </li>
+
+            <li class="has-button">
+              <a class="small button" href="#">Search</a>
+            </li>
+          </ul>
+        </section>
+    </nav>
+
+    <!-- End Navigation -->
+
+    </div>
+  </div>
+
 {% block content %}{% endblock %}
+
+  <!-- Footer -->
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>&copy; Copyright no one at all. Go to town.</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.write('<script src=/static/js/vendor/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="/static/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('#featured').orbit({ fluid: '2x1' });
+    });
+  </script>
+  <!-- End Footer -->
+
 </body>
 </html>
