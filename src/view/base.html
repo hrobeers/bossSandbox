@@ -23,12 +23,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">bossSandbox</a>
+        <a class="navbar-brand" href="/">bossSandbox</a>
         <div class="nav-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li id="Home"><a href="/">Home</a></li>
+            <li id="About"><a href="/about">About</a></li>
+            <li id="Contact"><a href="/contact">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -62,5 +62,11 @@
 
     <!-- Optionally enable responsive features in IE8 -->
     <script src="/static/js/respond.js"></script>
+
+    <!-- Activate correct navbar button -->
+    <script type="text/javascript">
+      x=document.getElementById("{{ title }}");  // Find the element
+      x.setAttribute("class", "active");    // Set active
+    </script>
   </body>
 </html>
