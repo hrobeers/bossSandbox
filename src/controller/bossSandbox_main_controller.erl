@@ -4,3 +4,9 @@
 
 index('GET', []) ->
     {ok, [{title, "bossSandbox"}]}.
+
+nope('GET', []) ->
+    {ok, []}.
+
+oops('GET', []) ->
+    {ok, []}.
