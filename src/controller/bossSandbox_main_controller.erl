@@ -3,10 +3,10 @@
 -compile(export_all).
 
 index('GET', []) ->
-    {ok, [{title, "Home"}]}.
+    {ok, [{title, "bossHome"}, {active, "Home"}]}.
 
 about('GET',[]) ->
-    {ok, [{title, "About"}]}.
+    {ok, [{title, "bossAbout"}, {active, "About"}]}.
 
 nope('GET', []) ->
     {ok, []}.
