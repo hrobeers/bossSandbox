@@ -1,4 +1,4 @@
--module(bossSandbox_partassembly, [Id, PartId, AssemblyId]).
+-module(partassembly, [Id, PartId, AssemblyId]).
 -compile(export_all).
 
 -belongs_to(part).
