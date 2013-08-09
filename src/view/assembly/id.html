@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+
+{% if assembly %}
+<h1>{{ assembly.name }}</h1>
+
+  {% if assembly.partassemblys %}
+  <table cellspacing="10" cellpadding="10">
+    {% for pa in assembly.partassemblys %}
+    <tr>
+      <td><a href="/part/id/{{ pa.part.id }}">{{ pa.part.name }}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+
+{% else %}
+<h1>Assembly does not exist</h1>
+{% endif %}
+
+{% endblock %}

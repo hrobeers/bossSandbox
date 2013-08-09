@@ -9,7 +9,7 @@
     {% if assemblys %}
     {% for assembly in assemblys %}
     <tr>
-      <td>{{ assembly.name }}</td>
+      <td><a href="/assembly/id/{{ assembly.id }}">{{ assembly.name }}</a></td>
     </tr>
     {% endfor %}
     {% endif %}

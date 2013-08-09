@@ -11,7 +11,7 @@
     {% if parts %}
     {% for part in parts %}
     <tr>
-      <td>{{ part.name }}</td>
+      <td><a href="/part/id/{{ part.id }}">{{ part.name }}</a></td>
       <td>{{ part.filejson }}</td>
       <td>{{ part.guid }}</td>
       </tr>
