@@ -2,4 +2,3 @@
 -compile(export_all).
 
 -has({partassemblys, many}).
--has({assemblys, many}).

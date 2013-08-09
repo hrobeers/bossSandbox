@@ -2,5 +2,4 @@
 -compile(export_all).
 
 -has({partassemblys, many}).
--has({parts, many}).
 -has({reviews, many}).

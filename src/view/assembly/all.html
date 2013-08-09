@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+  <table cellspacing="10" cellpadding="10">
+    <tr>
+      <th>Assembly name</th>
+      </tr>
+    {% if assemblys %}
+    {% for assembly in assemblys %}
+    <tr>
+      <td>{{ assembly.name }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    </table>
+  <br />
+    Number of assemblies: {{ count }}
+{% endblock %}

@@ -17,6 +17,7 @@
 {"/", [{controller, "main"}, {action, "index"}]}.
 {"/about", [{controller, "main"}, {action, "about"}]}.
 {"/parts", [{controller, "part"}, {action, "all"}]}.
+{"/assemblies", [{controller, "assembly"}, {action, "all"}]}.
 
 % 404 File Not Found handler
 {404, [{controller, "main"}, {action, "nope"}]}.
