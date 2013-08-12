@@ -2,18 +2,18 @@
 
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
-  <table cellspacing="10" cellpadding="10">
-    <tr>
-      <th>Assembly name</th>
-      </tr>
+  <div class="row">
     {% if assemblys %}
     {% for assembly in assemblys %}
-    <tr>
-      <td><a href="/assembly/id/{{ assembly.id }}">{{ assembly.name }}</a></td>
-    </tr>
+    <div class="col-lg-4">
+      <h2>{{ assembly.name }}</h2>
+      <p>some text</p>
+      <p><a class="btn btn-primary" href="/assembly/id/{{ assembly.id }}">View details &raquo;</a></p>
+    </div>
     {% endfor %}
     {% endif %}
-    </table>
+  </div>
+
   <br />
     Number of assemblies: {{ count }}
 {% endblock %}
