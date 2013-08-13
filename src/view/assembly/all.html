@@ -7,7 +7,7 @@
     {% for assembly in assemblys %}
     <div class="col-lg-4">
       <h2>{{ assembly.name }}</h2>
-      <p>some text</p>
+      <p>{{ assembly.creation_time }}</p>
       <p><a class="btn btn-primary" href="/assembly/id/{{ assembly.id }}">View details &raquo;</a></p>
     </div>
     {% endfor %}
